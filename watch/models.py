@@ -58,7 +58,7 @@ class Business(models.Model):
     business_name=models.CharField(max_length=50)
     user=models.ForeignKey(User,on_delete=models.CASCADE, null=True)
     email=models.EmailField()
-    neighborhood=models.ForeignKey(Neighborhood,on_delete=models.CASCADE)
+    neighborhood=models.ForeignKey(Neighborhood,on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.name
